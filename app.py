@@ -209,6 +209,14 @@ def getCarouselMessage(data):
                   "label": "台北101",
                   "data": json.dumps(data)
                 }
+              },
+              {
+                  "imageUrl": F"{end_point}/static/test.jpg",
+                  "action": {
+                      "type": "postback",
+                      "label": "法師喔",
+                      "data": json.dumps(data)
+                  }
               }
           ]
           }
