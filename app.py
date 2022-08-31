@@ -193,7 +193,8 @@ def getCarouselMessage(data):
       "altText": "this is a image carousel template",
       "template": {
           "type": "image_carousel",
-          "columns": [{
+          "columns": [
+              {
                 "imageUrl": F"{end_point}/static/taipei_101.jpeg",
                 "action": {
                   "type": "postback",
@@ -202,26 +203,17 @@ def getCarouselMessage(data):
                 }
               },
               {
-                "imageUrl": F"{end_point}/static/test2.jpeg",
+                "imageUrl": F"{end_point}/static/taipei_1.jpeg",
                 "action": {
                   "type": "postback",
-                  "label": "不良少年",
+                  "label": "台北101",
                   "data": json.dumps(data)
                 }
-              },
-              {
-                  "imageUrl": F"{end_point}/static/test.jpeg",
-                  "action": {
-                      "type": "postback",
-                      "label": "法師喔",
-                      "data": json.dumps(data)
-                  }
               }
           ]
           }
         }
     return message
-
 
 def getLocationConfirmMessage(title, latitude, longitude):
     data = {'title': title, 'latitude': latitude, 'longitude': longitude,
