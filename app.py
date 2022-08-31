@@ -215,6 +215,7 @@ def getCarouselMessage(data):
         }
     return message
 
+
 def getLocationConfirmMessage(title, latitude, longitude):
     data = {'title': title, 'latitude': latitude, 'longitude': longitude,
             'action': 'get_near'}
@@ -239,6 +240,7 @@ def getLocationConfirmMessage(title, latitude, longitude):
       }
     }
     return message
+
 
 def getCallCarMessage(data):
     message = {
