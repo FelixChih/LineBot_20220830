@@ -196,7 +196,6 @@ def getLocationConfirmMessage(title, latitude, longitude):
     message = dict()
     return message
 
-
 def getCallCarMessage(data):
     message = dict()
     return message
@@ -212,11 +211,19 @@ def getPlayStickerMessage():
 
 def getTaipei101LocationMessage():
     message = dict()
+    message["type"] = "location",
+    message["title"] = "台北101",
+    message["address"] = "110台北市信義區市府路45號",
+    message["latitude"] = 25.0335763,
+    message["longitude"] = 121.5616328
     return message
 
 
 def getMRTVideoMessage():
     message = dict()
+    message["type"] = "video"
+    message["originalContentUrl"] = F"{end_point}/static/taipei_101.video.mp4"
+    message["previewImageUrl"] = F"{end_point}/static/taipei_101.video.mp4"
     return message
 
 
@@ -238,6 +245,9 @@ def getTaipei101ImageMessage(originalContentUrl=F"{end_point}/static/taipei_101.
 
 def getImageMessage(originalContentUrl):
     message = dict()
+    message["type"] = "image",
+    message["originalContentUrl"] = originalContentUrl,
+    message["previewImageUrl"] = originalContentUrl
     return message
 
 
