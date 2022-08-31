@@ -193,7 +193,14 @@ def getCarouselMessage(data):
       "altText": "this is a image carousel template",
       "template": {
           "type": "image_carousel",
-          "columns": [
+          "columns": [{
+                "imageUrl": F"{end_point}/static/taipei_101.jpeg",
+                "action": {
+                  "type": "postback",
+                  "label": "台北101",
+                  "data": json.dumps(data)
+                }
+              },
               {
                 "imageUrl": F"{end_point}/static/test2.jpeg",
                 "action": {
