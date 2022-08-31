@@ -211,7 +211,7 @@ def getCarouselMessage(data):
                 }
               },
               {
-                  "imageUrl": F"{end_point}/static/test.jpg",
+                  "imageUrl": F"{end_point}/static/test.jpeg",
                   "action": {
                       "type": "postback",
                       "label": "法師喔",
