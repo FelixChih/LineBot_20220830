@@ -193,7 +193,7 @@ def getCarouselMessage(data):
 
 
 def getLocationConfirmMessage(title, latitude, longitude):
-    message = dict()
+    data  = {"title":title, "latitude":latitude, "longitude":longitude, "action":"get_near"}
     message = {
   "type" : "template",
   "altText" : "this is a confirm template",
